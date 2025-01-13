@@ -12,9 +12,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js",
-    "generate-docs": "jsdoc -c jsdoc.json"
+    "generate-docs": "jsdoc -c jsdoc.json",
+    "lint": "eslint . --ext .js, .ts"
   },
   "devDependencies": {
+    "@types/p5": "^1.7.6",
     "copy-webpack-plugin": "^11.0.0",
     "eslint-plugin-jsdoc": "^50.6.1",
     "html-webpack-plugin": "^5.6.0",
