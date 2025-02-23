@@ -1,0 +1,40 @@
+{
+  "name": "PacmanClasse",
+<<<<<<< HEAD
+  "version": "0.0.2",
+=======
+  "version": "0.0.3",
+>>>>>>> 8b5fd49221679ff0d9e1ec6eb12eb3991d0ae4b9
+  "description": "Practica Classe",
+  "private": true,
+  "keywords": [
+    ""
+  ],
+  "license": "",
+  "author": "",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo 'Error: no test specified' && exit 1",
+    "generate-docs": "jsdoc -c jsdoc.json --verbose",
+    "docs": "jsdoc js/classes/gameObject.js js/classes/circle.js -d docs",
+    "deploy": "vercel"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-ecmascript-compat": "^3.2.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-require-extensions": "^0.1.3",
+    "eslint-plugin-sonarjs": "^3.0.1"
+  },
+  "dependencies": {
+    "@types/p5": "^1.7.6",
+    "docdash": "^2.0.2",
+    "eslint-config-manzdev": "^0.0.8",
+    "jsdoc": "^4.0.4",
+    "vite": "^6.0.11"
+  }
+}
