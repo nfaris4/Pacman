@@ -82,12 +82,7 @@ function draw() {
     }
   }
 
-  for (let i = arrPowerUp.length - 1; i >= 0; i--) {
-    if (myPacman.testCollidePowerup(arrPowerUp[i]) && !arrPowerUp[i].enabledPowerup) {
-      arrPowerUp[i].enabledPowerup = true;
-      arrPowerUp[i].startTimePowerup = millis();
-    }
-  }
+  testFinishGameWithZombie();
 
   textSize(20);
   textAlign(CENTER, CENTER);
@@ -115,8 +110,10 @@ function draw() {
   if (wakaSound && !wakaSound.isPlaying()) {
     wakaSound.play();
   }
+
   testFinishGame();
 }
+
 
 function testFinishGame() {
   if (arrFood.length === 0) {
@@ -129,6 +126,26 @@ function testFinishGame() {
     loop();
   }
 }
+
+function testFinishGameWithZombie() {
+  for (let i = arrPowerUp.length - 1; i >= 0; i--) {
+    if (myPacman.testCollidePowerup(arrPowerUp[i]) && !arrPowerUp[i].enabledPowerup) {
+      arrPowerUp[i].enabledPowerup = true;
+      arrPowerUp[i].startTimePowerup = millis();
+
+      noLoop();
+
+      if (confirm("¡Perdiste! ¿Quieres jugar otra vez?")) {
+        restartGame();
+      } else {
+        alert("Gracias por jugar");
+      }
+
+      loop();
+    }
+  }
+}
+
 
 function keyPressed() {
   if (!myPacman) return;
