@@ -1,10 +1,6 @@
 {
   "name": "PacmanClasse",
-<<<<<<< HEAD
-  "version": "0.0.2",
-=======
-  "version": "0.0.3",
->>>>>>> 8b5fd49221679ff0d9e1ec6eb12eb3991d0ae4b9
+"version": "0.0.3",
   "description": "Practica Classe",
   "private": true,
   "keywords": [
