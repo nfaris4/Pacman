@@ -3,14 +3,9 @@ export const configGame = {
   IMAGE_SIZE: 32,
   COLUMNS: 10,
   EXTRA_SIZE_HEIGHT: 300,
-<<<<<<< HEAD
-  SPEED_PACMAN: 32, //
-  LIVES_PACMAN: 3,
-=======
-  SPEED_PACMAN: 32,
-  LIVES_PACMAN: 3,
-  //1 -> rock, 2 -> food, 3 -> pacman, 4 -> enemy, 5 -> powerup
->>>>>>> 8b5fd49221679ff0d9e1ec6eb12eb3991d0ae4b9
+SPEED_PACMAN: 32,
+LIVES_PACMAN: 3,
+//1 -> rock, 2 -> food, 3 -> pacman, 4 -> enemy, 5 -> powerup
   map: [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 2, 2, 2, 1, 2, 2, 5, 2, 1],
