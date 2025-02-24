@@ -8,8 +8,8 @@ const map = [
   [0, 1, 1, 0],
   [1, 1, 1, 1]
 ];
-const ROWS = 4;
-const COLUMNS = 4;
+const ROWS = 10;
+const COLUMNS = 10;
 export const IMAGE_SIZE = 32;
 const WIDTH_CANVAS = IMAGE_SIZE * COLUMNS;
 const HEIGHT_CANVAS = IMAGE_SIZE * ROWS;

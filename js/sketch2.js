@@ -4,6 +4,7 @@ import { Food } from "./classes/food.js";
 import { configGame } from "./constants.js";
 import { ErrorPac } from "./classes/errorPac.js";
 import { Powup } from "./classes/powup.js";
+import { IMAGE_SIZE } from "./sketch.js";
 
 let imgRock;
 let numberImagesLoaded = 0;
@@ -22,12 +23,12 @@ const arrPowerUp = [];
 
 function preload() {
   imgRock = loadImage("../media/roca.png", handleImage, handleError);
-  imgFood = loadImage("../media/food.png", handleImage, handleError);
-  imgPacman = loadImage("../media/pacLeft.png", handleImage, handleError);
-  imgPacmanRight = loadImage("../media/pacRight.png", handleImage, handleError);
-  imgPacmanUp = loadImage("../media/pacUp.png", handleImage, handleError);
-  imgPacmanLeft = loadImage("../media/pacLeft.png", handleImage, handleError);
-  imgPacmanDown = loadImage("../media/pacDown.png", handleImage, handleError);
+  imgFood = loadImage("../media/all.png", handleImage, handleError);
+  imgPacman = loadImage("../media/simonLeft.png", handleImage, handleError);
+  imgPacmanRight = loadImage("../media/simonRight.png", handleImage, handleError);
+  imgPacmanUp = loadImage("../media/simoncUp.png", handleImage, handleError);
+  imgPacmanLeft = loadImage("../media/simonLeft.png", handleImage, handleError);
+  imgPacmanDown = loadImage("../media/simonDown.png", handleImage, handleError);
   imgPowerUp = loadImage("../media/powerupimg.png", handleImage, handleError);
   wakaSound = loadSound("../media/audio/WakaWaka.mp3", handleErrorSound);
 }
