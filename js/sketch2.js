@@ -135,7 +135,7 @@ function testFinishGameWithZombie() {
 
       noLoop();
 
-      if (confirm("¡Perdiste! ¿Quieres jugar otra vez?")) {
+      if (confirm("¡UN ZOMBIE! Perdiste! ¿Quieres jugar otra vez?")) {
         restartGame();
       } else {
         alert("Gracias por jugar");
@@ -145,6 +145,33 @@ function testFinishGameWithZombie() {
     }
   }
 }
+
+function restartGame() {
+  // Reinicia la posició dels objectes
+  arrRocks.length = 0; 
+  arrFood.length = 0; 
+  arrPowerUp.length = 0; 
+
+  for (let fila = 0; fila < configGame.ROWS; fila++) {
+    for (let columna = 0; columna < configGame.COLUMNS; columna++) {
+      if (configGame.map[fila][columna] === 1) {
+        arrRocks.push(new gameObject(fila, columna));
+      } else if (configGame.map[fila][columna] === 2) {
+        arrFood.push(new Food(fila, columna));
+      } else if (configGame.map[fila][columna] === 3) {
+        myPacman = new Pacman(fila, columna);
+      } else if (configGame.map[fila][columna] === 5) {
+        arrPowerUp.push(new Powup(fila, columna));
+      }
+    }
+  }
+
+  myPacman.scorePacman = 0;
+  startTimeGame = millis(); // reinicia el temps del joc
+
+  loop();
+}
+
 
 
 function keyPressed() {
